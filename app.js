@@ -13,7 +13,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 
 // connect to mongodb
-const dbURI = 'mongodb+srv://user:eren1907@cluster0.uyher.mongodb.net/db1?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://<username>:<password>@cluster0.uyher.mongodb.net/db1?retryWrites=true&w=majority';
 mongoose.connect(dbURI,{useNewUrlParser:true, useUnifiedTopology:true}).then((result)=>app.listen(3000))
 .catch((err)=>console.log(err));
 
